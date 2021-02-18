@@ -1,0 +1,65 @@
+.Progress {
+    position: relative;
+    width: 100%;
+    background-color:#929292;
+    height: 0.5rem;
+    bottom: 3rem;
+}
+
+.PointsWrapper {
+    display: flex;
+    justify-content: space-around;
+    padding: 0 20rem;
+}
+
+.Point {
+    border-radius: 50%;
+    background-color:red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    bottom: 0.5rem;
+    color: white;
+    height: 0.5rem;
+    width: 0.5rem;
+}
+
+.PointWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.TickMark {
+    position: relative;
+    display: inline-block;
+    width: 10px;
+    height: 15px;
+}
+
+.TickMark::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    height: 50%;
+    width: 3px;
+    background-color: white;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
+
+.TickMark::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    content: "";
+    transform: translateX(10px) rotate(-45deg);
+    transform-origin: left bottom;
+}
